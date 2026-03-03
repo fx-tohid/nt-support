@@ -2,6 +2,7 @@ import React, { use, useState } from 'react';
 import CustomerTicket from '../CustomerTicket/CustomerTicket';
 import TicketStatus from './TicketStatus';
 import { toast } from 'react-toastify';
+import ResolvedTickets from './resolvedTickets';
 
 
 const CustomerTickets = ({ fetchDatas }) => {
@@ -9,11 +10,22 @@ const CustomerTickets = ({ fetchDatas }) => {
     const tickets = use(fetchDatas)
 
     const [status, setStatus] = useState([])
+    const [resolved, setResolved] = useState([]);
     const handleStats = (ticket, id) => {
         // console.log('Yo man I am here from', id);
         setStatus(stat => [...stat, ticket])
-        toast('Ticket Added')
+        toast('Ticket Added');
     }
+
+    const handleMarkAsResolved = (id, stats) => {
+        // console.log(id)
+        const remainTickets = status.filter(stat => stat.id !== id);
+        setStatus(remainTickets);
+        setResolved(prev => [...prev, stats]);
+        // setResolved(remainTickets)
+    }
+
+    // console.log(resolved);
 
 
     return (
@@ -95,7 +107,7 @@ const CustomerTickets = ({ fetchDatas }) => {
                     } */}
 
                     {
-                        status.map(stat => <TicketStatus key={stat.id} stat={stat}></TicketStatus>)
+                        status.map(stat => <TicketStatus handleMarkAsResolved={handleMarkAsResolved} key={stat.id} stat={stat}></TicketStatus>)
                     }
 
 
@@ -106,9 +118,14 @@ const CustomerTickets = ({ fetchDatas }) => {
                         <h3 className="text-lg font-semibold text-gray-800 mb-2">
                             Resolved Task
                         </h3>
-                        <p className="text-sm text-gray-500">
+                        {/* <p className="text-sm text-gray-500">
                             No resolved tasks yet.
-                        </p>
+                            
+                            resolved.something
+                        </p> */}
+                        {
+                            resolved.map(res => <ResolvedTickets resolved={res}></ResolvedTickets>)
+                        }
                     </div>
                 </div>
 
