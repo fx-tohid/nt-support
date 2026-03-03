@@ -1,0 +1,137 @@
+[
+  {
+    "id": "1001",
+    "title": "Homepage banner not loading",
+    "description": "The homepage banner image is not displaying correctly on mobile devices.",
+    "customer": "Victor Amz",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-01"
+  },
+  {
+    "id": "1002",
+    "title": "Checkout payment error",
+    "description": "Customers are receiving an error message when trying to pay with credit cards.",
+    "customer": "Brian YuuJewelsStore",
+    "priority": "Critical",
+    "status": "In Progress",
+    "createdAt": "2026-03-01"
+  },
+  {
+    "id": "1003",
+    "title": "Broken product image links",
+    "description": "Several product images are returning 404 errors after theme update.",
+    "customer": "Aaron CoverThree",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-03-02"
+  },
+  {
+    "id": "1004",
+    "title": "Shipping rates not calculating",
+    "description": "Live shipping rates are not appearing at checkout for Australia zone.",
+    "customer": "Dang MT Corp",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2026-03-02"
+  },
+  {
+    "id": "1005",
+    "title": "Meta Pixel not tracking conversions",
+    "description": "Meta Pixel is installed but not recording purchase events.",
+    "customer": "Alex Store Migration",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-02"
+  },
+  {
+    "id": "1006",
+    "title": "Product variants not syncing",
+    "description": "Color variants are not syncing properly between language versions.",
+    "customer": "Mark Electronics",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2026-03-02"
+  },
+  {
+    "id": "1007",
+    "title": "Theme customization request",
+    "description": "Client wants homepage redesigned with minimal white layout.",
+    "customer": "Nat PapillionEra",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2026-03-02"
+  },
+  {
+    "id": "1008",
+    "title": "Digital product download issue",
+    "description": "Customers are not receiving download link after purchasing digital product.",
+    "customer": "Thai Custom Store",
+    "priority": "Critical",
+    "status": "In Progress",
+    "createdAt": "2026-03-02"
+  },
+  {
+    "id": "1009",
+    "title": "Slow page load speed",
+    "description": "Product pages are loading slowly due to unoptimized images.",
+    "customer": "KwikShoppe",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2026-03-02"
+  },
+  {
+    "id": "1010",
+    "title": "Collection sorting issue",
+    "description": "Collections are not sorting products by best-selling as configured.",
+    "customer": "Andy Fitness",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2026-03-03"
+  },
+  {
+    "id": "1011",
+    "title": "TikTok pixel duplication",
+    "description": "Duplicate TikTok pixel detected causing inaccurate event tracking.",
+    "customer": "Victor Amz",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2026-03-03"
+  },
+  {
+    "id": "1012",
+    "title": "App integration conflict",
+    "description": "Bundle app conflicting with review app on product page.",
+    "customer": "Brian YuuJewelsStore",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-03-03"
+  },
+  {
+    "id": "1013",
+    "title": "Domain SSL warning",
+    "description": "SSL certificate warning appearing on checkout page.",
+    "customer": "Alex Store Migration",
+    "priority": "Critical",
+    "status": "Open",
+    "createdAt": "2026-03-03"
+  },
+  {
+    "id": "1014",
+    "title": "Product CSV import error",
+    "description": "CSV file import failing due to incorrect variant formatting.",
+    "customer": "Dang MT Corp",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2026-03-03"
+  },
+  {
+    "id": "1015",
+    "title": "Footer links misaligned",
+    "description": "Footer links appear misaligned on tablet view after theme update.",
+    "customer": "Nat PapillionEra",
+    "priority": "Low",
+    "status": "In Progress",
+    "createdAt": "2026-03-03"
+  }
+]
