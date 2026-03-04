@@ -15,7 +15,7 @@ const CustomerTickets = ({ fetchDatas, setProgress, setSolved }) => {
     const handleStats = (ticket, id) => {
         // console.log('Yo man I am here from', id);
         setStatus(stat => [...stat, ticket])
-        toast('Ticket Added');
+        toast.success('Ticket Added');
         setProgress(prev => prev + 1)
         // const remainTicketsList = tickets.filter(stat => stat.id !== id)
     }
@@ -28,7 +28,7 @@ const CustomerTickets = ({ fetchDatas, setProgress, setSolved }) => {
         const remainTickets = status.filter(stat => stat.id !== id);
         setStatus(remainTickets);
         setResolved(prev => [...prev, stats]);
-        toast('Ticket Resolved')
+        toast.success('Ticket Resolved')
         setProgress(prev => prev - 1)
         setSolved(prev => prev + 1)
         // setResolved(remainTickets)
