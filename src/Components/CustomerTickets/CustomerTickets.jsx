@@ -3,25 +3,34 @@ import CustomerTicket from '../CustomerTicket/CustomerTicket';
 import TicketStatus from './TicketStatus';
 import { toast } from 'react-toastify';
 import ResolvedTickets from './resolvedTickets';
+import { GiClothJar } from 'react-icons/gi';
 
 
-const CustomerTickets = ({ fetchDatas }) => {
+const CustomerTickets = ({ fetchDatas, setProgress, setSolved }) => {
 
     const tickets = use(fetchDatas)
-
     const [status, setStatus] = useState([])
     const [resolved, setResolved] = useState([]);
+    // const [progress, setProgress] = useState(0)
     const handleStats = (ticket, id) => {
         // console.log('Yo man I am here from', id);
         setStatus(stat => [...stat, ticket])
         toast('Ticket Added');
+        setProgress(prev => prev + 1)
+        // const remainTicketsList = tickets.filter(stat => stat.id !== id)
     }
+
+    // console.log(progress)
+
 
     const handleMarkAsResolved = (id, stats) => {
         // console.log(id)
         const remainTickets = status.filter(stat => stat.id !== id);
         setStatus(remainTickets);
         setResolved(prev => [...prev, stats]);
+        toast('Ticket Resolved')
+        setProgress(prev => prev - 1)
+        setSolved(prev => prev + 1)
         // setResolved(remainTickets)
     }
 
@@ -124,7 +133,7 @@ const CustomerTickets = ({ fetchDatas }) => {
                             resolved.something
                         </p> */}
                         {
-                            resolved.map(res => <ResolvedTickets resolved={res}></ResolvedTickets>)
+                            resolved.map(res => <ResolvedTickets key={res.id} resolved={res}></ResolvedTickets>)
                         }
                     </div>
                 </div>
