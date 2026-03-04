@@ -28,7 +28,7 @@ const Stats = ({ progress, solved }) => {
                     <div className="stat-bg right-0 h-full w-1/2 absolute bg-no-repeat" style={style2}></div>
                 </div>
 
-                <div className="rounded-lg relative p-10 text-white bg-linear-to-r from-green-500 to-teal-500 flex flex-col items-center justify-center">
+                <div className="rounded-lg relative p-10 text-white bg-linear-to-r from-green-500 to-[#00827A] flex flex-col items-center justify-center">
                     <div className="stat-bg left-0 h-full w-1/2 absolute bg-no-repeat" style={style}></div>
 
 

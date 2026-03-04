@@ -1,16 +1,33 @@
-# React + Vite
+# React Assignment QNA - Assignment 2
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Questions and Answers
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### 1. What is JSX, and why is it used?
 
-## React Compiler
+**A1:**  JSX is a syntax exteinsion in javascript that mainly used in react. it     stands for JavaScript XML, JSX allow us right html like code in Java script
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+#### 2. What is the difference between State and Props?
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**A2:**  Props is read-only datas which is passed from a parent Component to a child component props allow components to recieve external datas and make the component reusable and the State internal data managed in Component. it is mutable and it can be change over time usually in response to user actions, the component re renders when the state is changes
+
+---
+
+#### 3. What is the useState hook, and how does it work?
+
+**3A:**  useState is a React hook which allow functional components to store and mange dynamic datas, it works by returning two values, the current state and a function to update the state
+
+---
+
+#### 4. How can you share state between components in React?
+
+**4A:**  I can share state between components by lifting the state up to their closest common parent component and  pass the values to children components by props
+
+---
+
+#### 5. How is event handling done in React?
+
+**5A:**  Event handling in React is done by passing a handler function to event attributes like onClick. If the function requires parameters, it must be wrapped in an arrow function to prevent it from executing immediately during render.
