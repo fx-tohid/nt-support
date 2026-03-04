@@ -5,6 +5,7 @@ import Header from './Components/Header/Header'
 import Stats from './Components/Stats/Stats'
 import { ToastContainer } from 'react-toastify';
 import Footer from './Components/Footer/Footer'
+import { CircleLoader } from 'react-spinners'
 
 
 function App() {
@@ -17,9 +18,11 @@ function App() {
       {/* <h1 className='text-7xl'>Hello World</h1> */}
       <Header></Header>
       <Stats solved={solved} progress={progress}></Stats>
-      <Suspense fallback={<h1>Tickets Loading...</h1>}>
-        <CustomerTickets setSolved={setSolved} setProgress={setProgress} fetchDatas={fetchDatas}></CustomerTickets>
-      </Suspense>
+      <div className='bg-gray-100 pb-6'>
+        <Suspense fallback={<CircleLoader className='mx-auto ' color="#980ffa" />}>
+          <CustomerTickets setSolved={setSolved} setProgress={setProgress} fetchDatas={fetchDatas}></CustomerTickets>
+        </Suspense>
+      </div>
       <ToastContainer></ToastContainer>
       <Footer></Footer>
     </>
